@@ -44,6 +44,8 @@ module.exports = {
         'arrow-body-style': 'warn',
         // Typescript takes care of that already
         'import/no-unresolved': 'off',
+        // Cypress requires disable this rule
+        'import/no-extraneous-dependencies': 'off',
         // The "a" element does require the "href" attribute, but it's next's
         // Link job to pass it using "passHref".
         'jsx-a11y/anchor-is-valid': 'off',

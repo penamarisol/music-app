@@ -9,7 +9,9 @@
     "lint": "eslint .*.js *.js .storybook/*.js src --max-warnings=0",
     "lint:fix": "yarn lint --fix",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test:e2e": "npm start -- start:e2e",
+    "start:e2e": "cypress open"
   },
   "dependencies": {
     "$": "link:./src",
@@ -43,6 +45,7 @@
     "@z1digitalstudio/eslint-config-imports": "^1.0.0",
     "babel-loader": "^8.2.5",
     "babel-plugin-styled-components": "^2.0.7",
+    "cypress": "^11.2.0",
     "eslint": "7.32.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
