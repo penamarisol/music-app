@@ -68,6 +68,16 @@ For me it is really significant to have a clean code and a working application w
 
 <br>
 
+**E2E testing: Cypress 📝**
+
+I have decided to introduce e2e testing  because this kind of testing ensure the app is ready for launch with the security that appearance and behaviour work properly and there is any bug. In addition, I have worked previously with this technology, so I feel more comfortable on it. 
+
+In this implementation I have had some issues regarding on execute e2e testing on ci workflow. Basically, I was looking for any solution and I found in the following resource the library `start-server-and-test`.
+
+> Source: [Cypress Github Actions Docs](https://docs.cypress.io/guides/continuous-integration/introduction#Boot-your-server)
+
+<br>
+
 ## ▶️ Requisites
 
 - User should be able to:
