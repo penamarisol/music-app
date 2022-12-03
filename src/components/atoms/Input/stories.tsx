@@ -5,7 +5,7 @@ import { Props } from './types';
 
 export default {
   component: Input,
-  title: 'Form/Input',
+  title: 'Atoms/Input',
   args: {
     name: 'email',
     label: 'Email',

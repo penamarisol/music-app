@@ -5,7 +5,7 @@ import { SearchInputProps } from './types';
 
 export default {
   component: SearchInput,
-  title: 'Core/SearchInput',
+  title: 'Molecules/SearchInput',
   args: {
     placeholder: 'Search placeholder...',
     onChange: () => {},

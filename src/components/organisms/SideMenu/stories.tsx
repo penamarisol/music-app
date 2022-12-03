@@ -4,7 +4,7 @@ import { SideMenu } from '.';
 
 export default {
   component: SideMenu,
-  title: 'Layout/SideMenu',
+  title: 'Organisms/SideMenu',
 } as Meta;
 
 const Template: Story = () => <SideMenu />;
