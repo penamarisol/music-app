@@ -1,5 +1,5 @@
 import DefaultSearchLineIcon from '$/assets/icons/search-line.svg';
-import { Input as DefaultInput } from '$/components/Input';
+import { Input as DefaultInput } from '$/components/atoms/Input';
 import styled from 'styled-components';
 
 export const Container = styled.div`

@@ -78,6 +78,18 @@ In this implementation I have had some issues regarding on execute e2e testing o
 
 <br>
 
+**Atomic Web Design ⚛️**
+
+I have decided to change the current structure of initial components folder following the [`Atomic Web Design`](https://bradfrost.com/blog/post/atomic-web-design/) rules. This methodology categorizes into hierarchies each component in atoms, molecules, organisms, pages and templates. 
+
+
+This decision is made since I am going to start working on new components according to Figma design. So that, the number of components would gradually grow to keep them in a single folder.  
+ 
+
+> Source: [Talk about atomic design systems by Luz Riquelme](https://player.vimeo.com/video/775004105?color&autopause=0&loop=0&muted=0&title=1&portrait=1&byline=1&h=4fb73016b1#t=)
+
+<br>
+
 ## ▶️ Requisites
 
 - User should be able to:

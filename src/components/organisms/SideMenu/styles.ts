@@ -1,14 +1,29 @@
+import { from } from '$/styles/utils/responsive';
 import styled from 'styled-components';
 
 import { StyledMenuItemLinkProps, StyledMenuItemProps } from './types';
 
 export const Container = styled.aside`
   position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
 
-  width: 15rem;
-  height: 100vh;
+  ${from['tabletPortrait']} {
+    width: 15rem;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
 
   background-color: ${({ theme }) => theme.color.grayscale50};
+
+  .separator {
+    display: none;
+    ${from['tabletPortrait']} {
+      display: inline-block;
+    }
+  }
 `;
 
 export const UserInfoContainer = styled.div`
@@ -17,7 +32,12 @@ export const UserInfoContainer = styled.div`
   padding: 1.5rem 0.75rem 1rem 1rem;
 `;
 
-export const UserInfo = styled.div``;
+export const UserInfo = styled.div`
+  display: none;
+  ${from['mobile']} {
+    display: inline-block;
+  }
+`;
 
 export const MenuNav = styled.nav`
   padding: 0 0.75rem;
@@ -26,6 +46,14 @@ export const MenuNav = styled.nav`
 export const MenuList = styled.ul`
   list-style-type: none;
   padding-inline-start: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  ${from['tabletPortrait']} {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 `;
 
 export const MenuItemLink = styled.a<StyledMenuItemLinkProps>`
@@ -62,6 +90,7 @@ export const MainMenuItem = styled.li<StyledMenuItemProps>`
   background-color: ${({ theme, $isActive }) =>
     $isActive ? theme.color.white : 'transparent'};
   border-radius: 0.5rem;
+  width: 100%;
 `;
 
 export const Thumbnail = styled.img`

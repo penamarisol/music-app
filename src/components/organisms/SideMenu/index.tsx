@@ -1,6 +1,6 @@
 import badge from '$/assets/z1-badge.png';
-import { Separator } from '$/components/Separator';
-import { Text } from '$/components/Text';
+import { Separator } from '$/components/atoms/Separator';
+import { Text } from '$/components/atoms/Text';
 import { MAIN_MENU_LINKS } from '$/globals/constants/mainMenu';
 import Link from 'next/link';
 import React from 'react';
@@ -34,7 +34,11 @@ export const SideMenu = ({ className }: SideMenuProps) => {
           </Text>
         </UserInfo>
       </UserInfoContainer>
-      <Separator spaceBlockStart="0" spaceBlockEnd="1rem" />
+      <Separator
+        spaceBlockStart="0"
+        spaceBlockEnd="1rem"
+        className="separator"
+      />
       <MenuNav>
         <MenuList>
           {Object.values(MAIN_MENU_LINKS).map(

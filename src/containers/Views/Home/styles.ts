@@ -1,4 +1,4 @@
-import { SearchInput as DefaultSearchInput } from '$/components/SearchInput';
+import { SearchInput as DefaultSearchInput } from '$/components/molecules/SearchInput';
 import styled from 'styled-components';
 
 export const Container = styled.article`

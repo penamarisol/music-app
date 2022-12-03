@@ -1,4 +1,4 @@
-import { PageLayout } from '$/components/PageLayout';
+import { PageLayout } from '$/components/templates/PageLayout';
 import React, { ReactNode } from 'react';
 
 export const Layout = ({ children }: { children: ReactNode }) => (

@@ -1,5 +1,5 @@
-import { Separator } from '$/components/Separator';
-import { Text } from '$/components/Text';
+import { Separator } from '$/components/atoms/Separator';
+import { Text } from '$/components/atoms/Text';
 import type { Meta, Story } from '@storybook/react';
 
 import { PageLayout } from '.';
