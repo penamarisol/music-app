@@ -3,7 +3,7 @@ const theme = {
     white: '#ffffff',
     black: '#111111',
     grayscale900: '#22223D',
-    grayscale700: '#525068',
+    grayscale700: '#484A69',
     grayscale600: '#6B677D',
     grayscale500: '#837E92',
     grayscale300: '#B2ADBB',
