@@ -13,7 +13,7 @@ export const ProgressBar = React.forwardRef<HTMLInputElement, ProgressBarProps>(
 
     const sliderProgress = useMemo(
       () => calculateProgress(currentProgress, maxProgress),
-      [currentProgress],
+      [currentProgress, maxProgress, calculateProgress],
     );
 
     return (
