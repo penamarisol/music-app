@@ -7,7 +7,7 @@ import { PageLayoutProps } from './types';
 
 export default {
   component: PageLayout,
-  title: 'Layout/PageLayout',
+  title: 'Templates/PageLayout',
 } as Meta;
 
 const Template: Story<PageLayoutProps> = (args) => (

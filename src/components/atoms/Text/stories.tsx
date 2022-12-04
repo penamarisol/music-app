@@ -5,7 +5,7 @@ import { Text } from '.';
 
 export default {
   component: Text,
-  title: 'Core/Text',
+  title: 'Atoms/Text',
   args: { as: 'p', variant: 'titleXL' },
   argTypes: {
     as: {

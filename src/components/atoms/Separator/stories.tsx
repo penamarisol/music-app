@@ -5,7 +5,7 @@ import { SeparatorProps } from './types';
 
 export default {
   component: Separator,
-  title: 'Core/Separator',
+  title: 'Atoms/Separator',
   args: {
     spaceBlockStart: '3rem',
     spaceBlockEnd: '3rem',
