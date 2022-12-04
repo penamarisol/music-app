@@ -9,6 +9,6 @@ export type SongDetailProps = {
   description: string;
   genre: string;
   seconds: number;
-  playing: boolean;
-  icon: FavouriteIcon;
+  playing?: boolean;
+  icon?: FavouriteIcon;
 };
