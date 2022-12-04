@@ -27,7 +27,7 @@ export const Container = styled.input<$StyledProps>`
 
   ::-webkit-slider-thumb {
     width: 0.625rem;
-    height: 625rem;
+    height: 0.625rem;
     -webkit-appearance: none;
     border: none;
     border-radius: 50%;
