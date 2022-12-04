@@ -100,6 +100,13 @@ My first step has been created five atoms: Favourite, Image, Player Control, Pro
 
 <br>
 
+**Molecules**
+
+My second step has been created four molecules: Song Player Thumbnail, Player Progress Bar, PlayerControls and SongDescription. In this step, by contrast, I have felt more comfortable, since I made the decision-making work previously: this work is more releated of layout.
+
+
+<br>
+
 ## ▶️ Requisites
 
 - User should be able to:

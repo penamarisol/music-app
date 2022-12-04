@@ -5,7 +5,7 @@ import { Container } from './styles';
 import { ProgressBarProps } from './types';
 
 export const ProgressBar = React.forwardRef<HTMLInputElement, ProgressBarProps>(
-  ({ className, progress, maxProgress }, ref) => {
+  ({ className, progress, maxProgress, onChange }, ref) => {
     const [currentProgress, setCurrentProgress] = useState<number>(progress);
     const { calculateProgress } = useLogic();
 
@@ -26,7 +26,7 @@ export const ProgressBar = React.forwardRef<HTMLInputElement, ProgressBarProps>(
         max={maxProgress}
         min={0}
         step={1}
-        onChange={(ev) => setCurrentProgress(parseInt(ev.target.value))}
+        onChange={(ev) => onChange(parseInt(ev.target.value))}
       />
     );
   },
