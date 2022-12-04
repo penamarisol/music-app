@@ -90,6 +90,16 @@ This decision is made since I am going to start working on new components accord
 
 <br>
 
+**Atoms**
+
+My first step has been created five atoms: Favourite, Image, Player Control, Progress Bar and Tag. In this step I have experienced several doubts and learnings that I would like to share with you: 
+
+- In Player Control atom, it was a challenge about how to import a certain icon only when it is necessary. I have discovered this next advanced feature: [`Dynamic Import`](https://nextjs.org/docs/advanced-features/dynamic-import)
+
+- And, in image atom, I have a doubt about what is the convenience of adding Next images to image component. At the end, I have decided not to use it because the number of images in the application is not very large. Also, I don't have any requirement about app performance and SEO; so it seems unnecessary to spent time adjusting image atoms with Next image component. 
+
+<br>
+
 ## ▶️ Requisites
 
 - User should be able to:
