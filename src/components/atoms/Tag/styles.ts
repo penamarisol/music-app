@@ -12,4 +12,5 @@ export const Container = styled.span`
 
 export const Text = styled(DefaultText)`
   color: ${({ theme }) => theme.color.grayscale900};
+  text-align: center;
 `;

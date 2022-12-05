@@ -9,6 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  padding-top: 0.875rem;
 `;
 
 export const SongCard = styled(SongDetail)``;
