@@ -11,30 +11,28 @@ import { SongDetailProps } from './types';
 
 export const SongDetail = ({
   className,
-  url,
-  alt,
-  title,
-  author,
-  description,
-  genre,
-  seconds,
+  song,
   playing = false,
   icon = 'heart-add-outline',
 }: SongDetailProps) => (
   <Container className={className}>
     <Wrapper>
-      <Image url={url} alt={alt} />
+      <Image url={song.image.url} alt={song.image.alt} />
       <DescriptionContainer>
         <Text tag="h3" variant="bodyBold" color="grayscale900">
-          {title}
+          {song.title}
         </Text>
         <Text tag="h4" variant="body2Medium" color="grayscale700">
-          {author}
+          {song.author}
         </Text>
         <Text tag="p" variant="body2" color="grayscale700">
-          {description}
+          {song.description}
         </Text>
-        <SongDescription genre={genre} seconds={seconds} playing={playing} />
+        <SongDescription
+          genre={song.genre}
+          seconds={song.audio.seconds}
+          playing={playing}
+        />
       </DescriptionContainer>
     </Wrapper>
     <Favourite icon={icon} />

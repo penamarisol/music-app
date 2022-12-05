@@ -1,14 +1,6 @@
-type SongData = {
-  url: string;
-  alt: string;
-  title: string;
-  author: string;
-  description: string;
-  genre: string;
-  seconds: number;
-};
+import { Song } from '$/model/song';
 
 export type SongsListProps = {
   className?: string;
-  songs: Array<SongData>;
+  songs: Array<Song>;
 };
