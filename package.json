@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "$": "link:./src",
+    "@apollo/client": "^3.7.1",
+    "graphql": "^16.6.0",
     "husky": "^8.0.2",
     "next": "12.2.2",
     "react": "18.2.0",
