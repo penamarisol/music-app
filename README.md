@@ -107,6 +107,13 @@ My second step has been created four molecules: Song Player Thumbnail, Player Pr
 
 <br>
 
+**Organisms**
+
+My third step has been created three organisms: SongDetail, Songs List and Player. In this step, I have been focus on create the first draft of theses components, since when I'll introduce the logic, they'll change.
+
+<br>
+
+
 ## ▶️ Requisites
 
 - User should be able to:
