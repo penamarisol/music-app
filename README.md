@@ -113,6 +113,17 @@ My third step has been created three organisms: SongDetail, Songs List and Playe
 
 <br>
 
+**Apollo Client vs React Query ⚔️**
+
+It has been really tricky making a decision about which service I should use. 
+
+To get into context, I had never used `Apollo Client` and, I used `React Query` in several projects some month ago. So, it was time to look for extra information about both tecnologies. I saw a comparative table between [`Apollo Client`](https://www.apollographql.com/docs/react/) vs [`React Query`](https://react-query-v3.tanstack.com/) [here](https://tanstack.com/query/v4/docs/comparison?from=reactQueryV3&original=https://react-query-v3.tanstack.com/comparison). 
+
+It seems that `React Query` provides us better performance, but why did I finally choose `Apollo Client`?.
+
+First of all, because `Apollo Client` is the recommended option by [`Graphql`](https://graphql.org/code/). Secondly, because with `React Query` I had to install as well `Axios` or, maybe, `GraphQL Request`. And, finally, because I felt comfortable with `Apollo Client` getting started docs and I only needed this technology just for one fetching service.  
+
+<br>
 
 ## ▶️ Requisites
 
