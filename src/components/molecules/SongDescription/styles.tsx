@@ -10,7 +10,6 @@ export const Container = styled.div`
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.625rem;
 `;
 
 export const GenreLabel = styled(Tag)``;
