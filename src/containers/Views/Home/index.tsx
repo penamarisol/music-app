@@ -18,15 +18,11 @@ function HomeView(): JSX.Element {
         <Text tag="h2" variant="title2">
           Featured songs
         </Text>
-        <PlayListContainer>
+        <PlayListContainer $prettyScrollbar={true}>
           {loading ? (
-            <>
-              <SongDetailPlaceholder />
-              <SongDetailPlaceholder />
-              <SongDetailPlaceholder />
-              <SongDetailPlaceholder />
-              <SongDetailPlaceholder />
-            </>
+            Array.from(Array(5).keys()).map((_, index) => (
+              <SongDetailPlaceholder key={`song-placeholder-${index}`} />
+            ))
           ) : (
             <SongsList songs={playList} />
           )}
