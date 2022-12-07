@@ -134,7 +134,13 @@ Once I have the songs data, it's time to display them in the app. I have refacto
 So I finally got it out of the mapper and I've decided to do it in each render. 
 - Also, I have created the context with the playlist information and I have tested this feature. Here I found some challenges like typing the useReducer or making an intercept with graphql.
 
-My 
+
+<br>
+
+**Mark Song as Favourite 🖤**
+
+As we don't have any api method to save favourite songs, I have decided to save this information in the Local Storage. Also, I have chosen to manage favourite functionality in the Playlist context and also in the custom hook. This way, if we want this functionality in more parts in the future, it will be easier to add it.
+
 
 <br>
 
@@ -145,7 +151,7 @@ My
   - listen to any song they choose
   - play and pause song
   - control track
-  - mark a song as favorite
+  - mark a song as favorite ✅
 
 - User should be able to:
   - move between songs with the prev/next buttons of the audio player

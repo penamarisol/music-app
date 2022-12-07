@@ -19,9 +19,11 @@ describe('Explore specs', () => {
       ).as('playlistResponse');
     });
 
+    cy.clearLocalStorage();
     cy.visit('/');
     cy.wait('@playlistResponse');
     cy.get('[data-cy=song-detail]').as('songDetail');
+    cy.get('[data-cy=favourite-song-button]').as('favouriteButton');
   });
 
   it('visit the explore page', () => {
@@ -30,6 +32,18 @@ describe('Explore specs', () => {
 
   it('playlist should be display properly', () => {
     cy.get('@songDetail').should('have.length', 10);
+  });
+
+  it('song should be marked as favourite when click in the heart', () => {
+    cy.get('@favouriteButton').first().click();
+    cy.get('[data-cy=icon-heart-fill]').should('have.length', 1);
+  });
+  it('song should be removed as favourite when click in the fill heart', () => {
+    cy.get('@favouriteButton').first().click();
+    cy.get('[data-cy=icon-heart-fill]').should('have.length', 1);
+
+    cy.get('@favouriteButton').first().click();
+    cy.get('[data-cy=icon-heart-fill]').should('have.length', 0);
   });
 });
 
