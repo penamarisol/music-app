@@ -38,6 +38,7 @@ export const Container = styled.button<$StyledProps>`
   align-items: center;
   padding: 0.5rem;
   border-radius: 2.75rem;
+  cursor: pointer;
   ${({ theme, $variant }) =>
     $variant &&
     css`

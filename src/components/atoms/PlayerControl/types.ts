@@ -23,6 +23,7 @@ export type PlayerControlProps = {
   icon: PlayerControlIcon;
   size?: PlayerControlSize;
   variant?: PlayerControlVariant;
+  onClickControl?: () => void;
 };
 
 export type $StyledProps = {

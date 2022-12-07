@@ -20,9 +20,14 @@ const initialState = {
       ? (JSON.parse(localStorage.getItem('favs') as string) as number[])
       : [],
   loading: false,
+  currentSongPlayer: undefined,
+  playing: false,
   setPlaylist: () => {},
   addFavouriteSong: () => {},
   removeFavouriteSong: () => {},
+  setCurrentSongPlayer: () => {},
+  playSong: () => {},
+  pauseSong: () => {},
 };
 
 export const PlayListContext = createContext<PlayListContextType>(initialState);
@@ -41,16 +46,30 @@ export function PlayListProvider({ children }: { children: ReactElement }) {
     dispatch({ type: ActionType.AddFavoriteSong, payload: { song } });
   const removeFavouriteSong = (song: Song) =>
     dispatch({ type: ActionType.RemoveFavoriteSong, payload: { song } });
+  const setCurrentSongPlayer = (song: Song) =>
+    dispatch({ type: ActionType.SetCurrentSongPlayer, payload: { song } });
+  const playSong = () =>
+    dispatch({ type: ActionType.PlaySong, payload: undefined });
+  const pauseSong = () =>
+    dispatch({ type: ActionType.PauseSong, payload: undefined });
 
-  useEffect(() => setPlaylist(playList), [playList]);
+  useEffect(() => {
+    setPlaylist(playList);
+    if (playList.length > 0) setCurrentSongPlayer(playList[0] as Song);
+  }, [playList]);
 
   const value: PlayListContextType = {
     setPlaylist,
     addFavouriteSong,
     removeFavouriteSong,
+    setCurrentSongPlayer,
+    playSong,
+    pauseSong,
     loading,
+    playing: state.playing,
     playList: state.playList,
     favouriteSongs: state.favouriteSongs,
+    currentSongPlayer: state.currentSongPlayer,
   };
 
   return (

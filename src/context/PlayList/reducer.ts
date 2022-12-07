@@ -24,6 +24,12 @@ export const reducer = (state: PlayListContextType, action: Action) => {
         ...state,
         playList: action.payload.playlist,
       };
+    case ActionType.SetCurrentSongPlayer:
+      return { ...state, currentSongPlayer: action.payload.song };
+    case ActionType.PlaySong:
+      return { ...state, playing: true };
+    case ActionType.PauseSong:
+      return { ...state, playing: false };
     default:
       return state;
   }

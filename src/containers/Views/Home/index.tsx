@@ -1,4 +1,5 @@
 import { Text } from '$/components/atoms/Text';
+import { Player } from '$/components/organisms/Player';
 import { SongDetailPlaceholder } from '$/components/organisms/SongDetailPlaceholder';
 import { SongsList } from '$/components/organisms/SongList';
 import { usePlayList } from '$/context/PlayList';
@@ -28,6 +29,7 @@ function HomeView(): JSX.Element {
           )}
         </PlayListContainer>
       </Wrapper>
+      <Player />
     </Container>
   );
 }
