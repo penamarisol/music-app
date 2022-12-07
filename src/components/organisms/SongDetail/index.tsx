@@ -1,3 +1,4 @@
+import { useLogic } from './logic';
 import {
   Container,
   DescriptionContainer,
@@ -14,27 +15,32 @@ export const SongDetail = ({
   song,
   playing = false,
   icon = 'heart-add-outline',
-}: SongDetailProps) => (
-  <Container className={className}>
-    <Wrapper>
-      <Image url={song.image.url} alt={song.image.alt} />
-      <DescriptionContainer>
-        <Text tag="h3" variant="bodyBold" color="grayscale900">
-          {song.title}
-        </Text>
-        <Text tag="h4" variant="body2Medium" color="grayscale700">
-          {song.author}
-        </Text>
-        <Text tag="p" variant="body2" color="grayscale700">
-          {song.description}
-        </Text>
-        <SongDescription
-          genre={song.genre}
-          seconds={song.audio.seconds}
-          playing={playing}
-        />
-      </DescriptionContainer>
-    </Wrapper>
-    <Favourite icon={icon} />
-  </Container>
-);
+}: SongDetailProps) => {
+  const { seconds, loading } = useLogic(song);
+
+  return (
+    <Container className={className} data-cy="song-detail">
+      <Wrapper>
+        <Image url={song.image.url} alt={song.image.alt} />
+        <DescriptionContainer>
+          <Text tag="h3" variant="bodyBold" color="grayscale900">
+            {song.title}
+          </Text>
+          <Text tag="h4" variant="body2Medium" color="grayscale700">
+            {song.author}
+          </Text>
+          <Text tag="p" variant="body2" color="grayscale700">
+            {song.description}
+          </Text>
+          <SongDescription
+            genre={song.genre}
+            seconds={seconds}
+            playing={playing}
+            loading={loading}
+          />
+        </DescriptionContainer>
+      </Wrapper>
+      <Favourite icon={icon} />
+    </Container>
+  );
+};

@@ -1,5 +1,5 @@
 type Thumbnail = { url: string; alt: string };
-type Audio = { url: string; seconds: number };
+type Audio = { url: string };
 
 export type Song = {
   id: number;

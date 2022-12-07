@@ -7,6 +7,7 @@ export const SongDescription = ({
   genre,
   seconds,
   playing = false,
+  loading = false,
 }: SongDescriptionProps) => {
   const { convertSecondsToMinutes } = useLogic();
   const songDurationInMinutes = convertSecondsToMinutes(seconds);
@@ -18,9 +19,11 @@ export const SongDescription = ({
       ) : (
         <Play icon="play" size="small" />
       )}
-      <Text tag="p" variant="caption">
-        {songDurationInMinutes} min
-      </Text>
+      {!loading && (
+        <Text tag="p" variant="caption">
+          {songDurationInMinutes} min
+        </Text>
+      )}
       <GenreLabel label={genre} />
     </Container>
   );
