@@ -7,15 +7,19 @@ export default {
   component: SongDetail,
   title: 'Organisms/SongDetail',
   args: {
-    url: 'https://via.placeholder.com/150',
-    alt: 'Placeholder',
-    title: 'Out of My Mine',
-    author: 'Anuel AA',
-    description:
-      'Today is the Dia del Libro in Spain and we are celebrating our passion for books and reading. We’ve just created an online bookclub on Slack',
-    genre: 'Techno',
+    song: {
+      image: {
+        url: 'https://via.placeholder.com/150',
+        alt: 'Placeholder',
+      },
+      title: 'Out of My Mine',
+      author: 'Anuel AA',
+      description:
+        'Today is the Dia del Libro in Spain and we are celebrating our passion for books and reading. We’ve just created an online bookclub on Slack',
+      genre: 'Techno',
+      audio: { seconds: 180 },
+    },
     playing: false,
-    seconds: 180,
     icon: 'heart-add-outline',
   },
 } as Meta;

@@ -109,7 +109,7 @@ My second step has been created four molecules: Song Player Thumbnail, Player Pr
 
 **Organisms**
 
-My third step has been created three organisms: SongDetail, Songs List and Player. In this step, I have been focus on create the first draft of theses components, since when I'll introduce the logic, they'll change.
+My third step has been created four organisms: Song Detail, Song Detail Placeholder, Songs List and Player. In this step, I have been focus on create the first draft of theses components, since when I'll introduce the logic, they'll change.
 
 <br>
 
@@ -125,10 +125,23 @@ First of all, because `Apollo Client` is the recommended option by [`Graphql`](h
 
 <br>
 
+**Display Songs 🔊**
+
+Once I have the songs data, it's time to display them in the app. I have refactored this feature several times in the process:
+- Initially I had thought to treat the data in the View container directly and transform it into a useLogic.
+- Then, looking for information, I found the concept of [`Anti-corruption layer`](https://www.viewnext.com/anti-corruption-layer/). Following this strategy, it recommended you transform the data before using it in your view. So if the api changed, your view was agnostic to it.
+- The next challenge was to transform the data, mainly the songs durantion. I thought about including it in the service mapper. But, it took too long while rendering each audio.
+So I finally got it out of the mapper and I've decided to do it in each render. 
+- Also, I have created the context with the playlist information and I have tested this feature. Here I found some challenges like typing the useReducer or making an intercept with graphql.
+
+My 
+
+<br>
+
 ## ▶️ Requisites
 
 - User should be able to:
-  - see list of songs
+  - see list of songs ✅
   - listen to any song they choose
   - play and pause song
   - control track
@@ -137,9 +150,9 @@ First of all, because `Apollo Client` is the recommended option by [`Graphql`](h
 - User should be able to:
   - move between songs with the prev/next buttons of the audio player
 
-- App should look good in all window sizes
-- Add unit or integration tests
+- App should look good in all window sizes ✅
+- Add unit or integration tests ✅
 - Add some micro interactions and animations
 - Be careful about accessibility
-- Be careful about your markup semantics
+- Be careful about your markup semantics ✅
 

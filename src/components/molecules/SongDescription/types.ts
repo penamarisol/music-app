@@ -3,4 +3,5 @@ export type SongDescriptionProps = {
   genre: string;
   seconds: number;
   playing: boolean;
+  loading?: boolean;
 };

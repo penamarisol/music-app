@@ -1,0 +1,187 @@
+{
+  "songs": {
+    "songs": [
+      {
+        "id": 17,
+        "name": "Allison Williams",
+        "description": "Arrive number return group relate forget whatever. Successful put agreement clear prepare tax.\nFirst help really. Father evening indeed four however check learn music.",
+        "genre": "BOUNCY_TECHNO",
+        "image": "https://images.unsplash.com/photo-1622977265115-cce36eb43f18?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=280&ixid=MnwxfDB8MXxyYW5kb218MHx8aW1nfHx8fHx8MTY2MjEwOTczNw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400",
+        "author": {
+          "id": 17,
+          "name": "William Tran",
+          "__typename": "Author"
+        },
+        "audio": {
+          "id": 17,
+          "url": "https://d2s139ebbsksc4.cloudfront.net/Noel.mp3",
+          "__typename": "Audio"
+        },
+        "__typename": "Song"
+      },
+      {
+        "id": 9,
+        "name": "Ann Raymond",
+        "description": "Like everyone which. Case end mention threat hand field area school. Those into design agree.\nKind exactly gun heart hope option power growth. International top Congress.",
+        "genre": "NEW_BEAT",
+        "image": "https://images.unsplash.com/photo-1526900913101-88c16676ca02?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=280&ixid=MnwxfDB8MXxyYW5kb218MHx8aW1nfHx8fHx8MTY2MjEwOTczNA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400",
+        "author": {
+          "id": 9,
+          "name": "Dr. Sean Nelson",
+          "__typename": "Author"
+        },
+        "audio": {
+          "id": 9,
+          "url": "https://d2s139ebbsksc4.cloudfront.net/Thingamajig.mp3",
+          "__typename": "Audio"
+        },
+        "__typename": "Song"
+      },
+      {
+        "id": 3,
+        "name": "Casey Webb",
+        "description": "Issue their movement three Republican left. Account response visit.\nBest wait myself long war area knowledge southern. Oil sell report not past.",
+        "genre": "ELECTRONIC_ROCK",
+        "image": "https://images.unsplash.com/photo-1622977265144-83e92cf7679a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=280&ixid=MnwxfDB8MXxyYW5kb218MHx8aW1nfHx8fHx8MTY2MjEwOTczMg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400",
+        "author": {
+          "id": 3,
+          "name": "Christina Mendoza",
+          "__typename": "Author"
+        },
+        "audio": {
+          "id": 3,
+          "url": "https://d2s139ebbsksc4.cloudfront.net/AcousticRock.mp3",
+          "__typename": "Audio"
+        },
+        "__typename": "Song"
+      },
+      {
+        "id": 1,
+        "name": "Donald Burke",
+        "description": "Office second prove whole seven. Lay artist industry tend win environmental particularly Democrat.",
+        "genre": "POST_BOP",
+        "image": "https://images.unsplash.com/photo-1602922960044-d48ce791d3c0?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=280&ixid=MnwxfDB8MXxyYW5kb218MHx8aW1nfHx8fHx8MTY2MjEwOTczMQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400",
+        "author": {
+          "id": 1,
+          "name": "Micheal Cherry",
+          "__typename": "Author"
+        },
+        "audio": {
+          "id": 1,
+          "url": "https://d2s139ebbsksc4.cloudfront.net/CryinInMyBeer.mp3",
+          "__typename": "Audio"
+        },
+        "__typename": "Song"
+      },
+      {
+        "id": 18,
+        "name": "Donald Lyons",
+        "description": "Ability million company south. Program term manager. Song focus day process leader effect poor.",
+        "genre": "POWERVIOLENCE",
+        "image": "https://images.unsplash.com/photo-1560011316-90b2677df5d9?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=280&ixid=MnwxfDB8MXxyYW5kb218MHx8aW1nfHx8fHx8MTY2MjEwOTczOA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400",
+        "author": {
+          "id": 18,
+          "name": "Amy Nichols",
+          "__typename": "Author"
+        },
+        "audio": {
+          "id": 18,
+          "url": "https://d2s139ebbsksc4.cloudfront.net/SouthOfTheBorder.mp3",
+          "__typename": "Audio"
+        },
+        "__typename": "Song"
+      },
+      {
+        "id": 12,
+        "name": "Donna Jenkins",
+        "description": "Body religious several anyone. Price whatever senior party stage space. Space attention grow.",
+        "genre": "ELECTROCLASH",
+        "image": "https://images.unsplash.com/photo-1526900913101-88c16676ca02?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=280&ixid=MnwxfDB8MXxyYW5kb218MHx8aW1nfHx8fHx8MTY2MjEwOTczNQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400",
+        "author": {
+          "id": 12,
+          "name": "Brandi Welch",
+          "__typename": "Author"
+        },
+        "audio": {
+          "id": 12,
+          "url": "https://d2s139ebbsksc4.cloudfront.net/Renaissance.mp3",
+          "__typename": "Audio"
+        },
+        "__typename": "Song"
+      },
+      {
+        "id": 5,
+        "name": "Elizabeth Rivera",
+        "description": "Reason detail structure move which able among cup. Officer standard officer design cut medical possible. Black near manage it else chance total.",
+        "genre": "GROOVE_METAL",
+        "image": "https://images.unsplash.com/photo-1622977265144-83e92cf7679a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=280&ixid=MnwxfDB8MXxyYW5kb218MHx8aW1nfHx8fHx8MTY2MjEwOTczMw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400",
+        "author": {
+          "id": 5,
+          "name": "Kenneth Clark",
+          "__typename": "Author"
+        },
+        "audio": {
+          "id": 5,
+          "url": "https://d2s139ebbsksc4.cloudfront.net/AmazingGrace.mp3",
+          "__typename": "Audio"
+        },
+        "__typename": "Song"
+      },
+      {
+        "id": 16,
+        "name": "Hannah Cooper",
+        "description": "Support cause area method particularly. Peace Democrat who space sometimes ago campaign.",
+        "genre": "NOVELTY_RAGTIME",
+        "image": "https://images.unsplash.com/photo-1622977265115-cce36eb43f18?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=280&ixid=MnwxfDB8MXxyYW5kb218MHx8aW1nfHx8fHx8MTY2MjEwOTczNw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400",
+        "author": {
+          "id": 16,
+          "name": "Zachary Diaz",
+          "__typename": "Author"
+        },
+        "audio": {
+          "id": 16,
+          "url": "https://d2s139ebbsksc4.cloudfront.net/TheBigDecision.mp3",
+          "__typename": "Audio"
+        },
+        "__typename": "Song"
+      },
+      {
+        "id": 0,
+        "name": "James Eaton",
+        "description": "Human amount heart relate challenge capital after. Stage then conference figure believe establish. Eye provide total instead American.",
+        "genre": "ITALO_DISCO",
+        "image": "https://images.unsplash.com/photo-1602922960044-d48ce791d3c0?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=280&ixid=MnwxfDB8MXxyYW5kb218MHx8aW1nfHx8fHx8MTY2MjEwOTczMA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400",
+        "author": {
+          "id": 0,
+          "name": "Heather Evans",
+          "__typename": "Author"
+        },
+        "audio": {
+          "id": 0,
+          "url": "https://d2s139ebbsksc4.cloudfront.net/Limosine.mp3",
+          "__typename": "Audio"
+        },
+        "__typename": "Song"
+      },
+      {
+        "id": 11,
+        "name": "Jeffrey Graves",
+        "description": "Will agreement condition bank success. Cover child full stay arrive the. Know tend would policy to true detail.",
+        "genre": "GHETTO_HOUSE",
+        "image": "https://images.unsplash.com/photo-1526900913101-88c16676ca02?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=280&ixid=MnwxfDB8MXxyYW5kb218MHx8aW1nfHx8fHx8MTY2MjEwOTczNQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400",
+        "author": {
+          "id": 11,
+          "name": "Andrea Boyer",
+          "__typename": "Author"
+        },
+        "audio": {
+          "id": 11,
+          "url": "https://d2s139ebbsksc4.cloudfront.net/SailorsLament.mp3",
+          "__typename": "Audio"
+        },
+        "__typename": "Song"
+      }
+    ],
+    "__typename": "SongResponse"
+  }
+}
