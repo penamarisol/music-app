@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const getSongsQuery = gql`
-  query {
+  query SongsQuery {
     songs {
       songs {
         id
