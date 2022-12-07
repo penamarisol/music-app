@@ -14,9 +14,8 @@ export const SongDetail = ({
   className,
   song,
   playing = false,
-  icon = 'heart-add-outline',
 }: SongDetailProps) => {
-  const { seconds, loading } = useLogic(song);
+  const { seconds, loading, isFavourite, toggleFavourite } = useLogic(song);
 
   return (
     <Container className={className} data-cy="song-detail">
@@ -40,7 +39,10 @@ export const SongDetail = ({
           />
         </DescriptionContainer>
       </Wrapper>
-      <Favourite icon={icon} />
+      <Favourite
+        icon={isFavourite ? 'heart-fill' : 'heart-add-outline'}
+        onClickFavourite={toggleFavourite}
+      />
     </Container>
   );
 };
