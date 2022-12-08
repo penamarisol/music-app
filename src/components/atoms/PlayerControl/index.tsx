@@ -21,6 +21,7 @@ export const PlayerControl = React.forwardRef<
         $variant={variant}
         ref={ref}
         onClick={onClickControl}
+        data-cy={`${icon}-button`}
       >
         <Icon />
       </Container>
