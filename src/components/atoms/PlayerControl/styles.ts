@@ -17,8 +17,8 @@ const variantTheme: Record<PlayerControlVariant, VariantTheme> = {
 };
 
 const sizeTheme: Record<PlayerControlSize, SizeTheme> = {
-  regular: { buttonSize: '2.5rem', iconSize: '1.5rem' },
-  small: { buttonSize: '2rem', iconSize: '1rem' },
+  regular: { buttonSize: '2.5rem', iconSize: '1.5rem', hoverSize: '2.55rem' },
+  small: { buttonSize: '2rem', iconSize: '1rem', hoverSize: '2.05rem' },
 };
 
 export const Container = styled.button<$StyledProps>`
@@ -31,6 +31,11 @@ export const Container = styled.button<$StyledProps>`
       svg {
         width: ${sizeTheme[$size].iconSize};
         height: ${sizeTheme[$size].iconSize};
+      }
+
+      :hover {
+        width: ${sizeTheme[$size].hoverSize};
+        height: ${sizeTheme[$size].hoverSize};
       }
     `}
   border: none;
