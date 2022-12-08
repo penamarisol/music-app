@@ -149,6 +149,18 @@ As we don't have any api method to save favourite songs, I have decided to save 
 The last feature! I have worked with audio elements from time to time, so I thought this task would be more dificult to finish. So, first I had to learn more about html5 audio element. Secondly, I have looked how to manage audio src once loaded in the html element. And, lastly, I have tried to  make sense Playlist context according to what is happening in the audio.
 
 <br>
+
+**Accessibility 👀**
+
+I have tried to work accessibility throughout the Music app. To verify it, I have checked the url of the project through a web accessibility check. I have obtained a score of 100: 
+<br>
+
+![!Accessibility checked](./public/accessibility_checked.png)
+
+> Source: [Accessibility Check](https://www.experte.com/accessibility)
+
+<br>
+
 ## ▶️ Requisites
 
 - User should be able to:
@@ -164,6 +176,6 @@ The last feature! I have worked with audio elements from time to time, so I thou
 - App should look good in all window sizes ✅
 - Add unit or integration tests ✅
 - Add some micro interactions and animations 
-- Be careful about accessibility
+- Be careful about accessibility ✅
 - Be careful about your markup semantics ✅
 
