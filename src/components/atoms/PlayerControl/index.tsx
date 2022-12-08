@@ -22,6 +22,7 @@ export const PlayerControl = React.forwardRef<
         ref={ref}
         onClick={onClickControl}
         data-cy={`${icon}-button`}
+        aria-label={`${icon} button`}
       >
         <Icon />
       </Container>
