@@ -4,7 +4,13 @@ import { SongDetailPlaceholder } from '$/components/organisms/SongDetailPlacehol
 import { SongsList } from '$/components/organisms/SongList';
 import { usePlayList } from '$/context/PlayList';
 
-import { Container, PlayListContainer, SearchInput, Wrapper } from './styles';
+import {
+  Container,
+  PlayerContainer,
+  PlayListContainer,
+  SearchInput,
+  Wrapper,
+} from './styles';
 
 function HomeView(): JSX.Element {
   const { playList, loading } = usePlayList();
@@ -29,7 +35,9 @@ function HomeView(): JSX.Element {
           )}
         </PlayListContainer>
       </Wrapper>
-      <Player />
+      <PlayerContainer>
+        <Player />
+      </PlayerContainer>
     </Container>
   );
 }

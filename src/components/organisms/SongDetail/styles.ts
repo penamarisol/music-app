@@ -29,7 +29,19 @@ export const DescriptionContainer = styled.div`
   }
 `;
 export const Favourite = styled(DefaultFavourite)``;
-export const Image = styled(DefaultImage)``;
+export const Image = styled(DefaultImage)`
+  width: 6rem;
+  height: 6rem;
+  ${from['mobile']} {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  ${from['tabletPortrait']} {
+    width: 8.75rem;
+    height: 8.75rem;
+  }
+`;
 export const SongDescription = styled(DefaultSongDescription)`
   padding-top: 0.5rem;
 `;
@@ -45,7 +57,11 @@ export const Wrapper = styled.div`
 
   ${from['mobile']} {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+  }
+
+  ${from['tabletLandscape']} {
+    align-items: center;
   }
 `;

@@ -1,5 +1,6 @@
 import { Image } from '$/components/atoms/Image';
 import { Text } from '$/components/atoms/Text';
+import { from } from '$/styles/utils/responsive';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -20,9 +21,13 @@ export const SongTitle = styled(Text)`
   color: ${({ theme }) => theme.color.white};
 `;
 export const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: none;
+
+  ${from['mobile']} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const Thumbnail = styled(Image)``;
