@@ -38,10 +38,10 @@ export const useLogic = () => {
   }, [playing, audioRef]);
 
   useEffect(() => {
-    if (audioRef.current && songPlayer?.audio.url) {
-      audioRef.current.src = songPlayer?.audio.url;
-      if (playing) void audioRef.current?.play();
+    if (audioRef.current && songPlayer?.audio.url !== audioRef.current.src) {
+      audioRef.current.src = songPlayer?.audio.url as string;
     }
+    if (playing) void audioRef.current?.play();
   }, [songPlayer?.audio.url, playing]);
 
   useEffect(() => {
