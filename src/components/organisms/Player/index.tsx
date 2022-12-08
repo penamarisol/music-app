@@ -22,6 +22,7 @@ export const Player = ({ className }: PlayerProps) => {
     pause,
     skipBackward,
     skipForward,
+    onProgressUpdated,
     setCurrentProgress,
   } = useLogic();
 
@@ -58,14 +59,18 @@ export const Player = ({ className }: PlayerProps) => {
         <audio
           ref={audioRef}
           src={songPlayer?.audio.url}
-          onTimeUpdate={setCurrentProgress}
+          onTimeUpdate={onProgressUpdated}
           onEnded={skipForward}
         />
         <PlayerControls
           onClickControl={switchPlayerActions}
           playing={playing}
         />
-        <PlayerProgressBar progress={progress} maxProgress={maxProgress} />
+        <PlayerProgressBar
+          progress={progress}
+          maxProgress={maxProgress}
+          onChangeProgress={setCurrentProgress}
+        />
       </Wrapper>
     </Container>
   );

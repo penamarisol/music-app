@@ -20,6 +20,7 @@ export const Text = styled(DefaultText)`
 `;
 export const ProgressBar = styled(DefaultProgressBar)`
   max-width: 29.75rem;
+  cursor: pointer;
 
   ${from['tabletPortrait']} {
     max-width: 20.75rem;

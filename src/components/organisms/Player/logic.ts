@@ -18,10 +18,14 @@ export const useLogic = () => {
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const setCurrentProgress = () => {
+  const onProgressUpdated = () => {
     if (audioRef.current) setProgress(Math.round(audioRef.current.currentTime));
   };
 
+  const setCurrentProgress = (newProgress: number) => {
+    setProgress(newProgress);
+    if (audioRef.current) audioRef.current.currentTime = newProgress;
+  };
   const play = () => playSong();
   const pause = () => pauseSong();
 
@@ -55,6 +59,7 @@ export const useLogic = () => {
     songPlayer,
     audioRef,
     progress,
+    onProgressUpdated,
     setCurrentProgress,
     play,
     pause,
