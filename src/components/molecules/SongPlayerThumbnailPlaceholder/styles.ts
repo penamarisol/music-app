@@ -1,3 +1,4 @@
+import { loopShadow } from '$/styles/utils/mixins';
 import { from } from '$/styles/utils/responsive';
 import styled from 'styled-components';
 
@@ -17,12 +18,14 @@ export const ImageContainer = styled.div`
   height: 3rem;
   border-radius: 0.75rem;
   background-color: ${({ theme }) => theme.color.grayscale100};
+  ${loopShadow};
 `;
 
 export const SongTitle = styled.div`
   width: 4rem;
   height: 1rem;
   background-color: ${({ theme }) => theme.color.grayscale100};
+  ${loopShadow};
 
   ${from['mobile']} {
     width: 6rem;
@@ -33,6 +36,7 @@ export const SongAuthor = styled.div`
   width: 6rem;
   height: 1rem;
   background-color: ${({ theme }) => theme.color.grayscale100};
+  ${loopShadow};
 
   ${from['mobile']} {
     width: 8rem;

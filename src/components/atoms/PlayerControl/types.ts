@@ -16,6 +16,7 @@ export type VariantTheme = {
 export type SizeTheme = {
   buttonSize: string;
   iconSize: string;
+  hoverSize: string;
 };
 
 export type PlayerControlProps = {

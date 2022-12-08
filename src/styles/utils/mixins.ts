@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css, keyframes } from 'styled-components';
 import type {
   DefaultTheme,
   FlattenInterpolation,
@@ -49,4 +49,16 @@ export const visuallyHidden = css`
   clip: rect(1px, 1px, 1px, 1px) !important;
   -webkit-clip-path: inset(50%) !important;
   clip-path: inset(50%) !important;
+`;
+
+const loopShadowAnimation = keyframes`
+0% { background-color: #E0DDE4}
+50% { background-color: #C9CDDB}
+100% { background-color: #E0DDE4}
+`;
+
+export const loopShadow = css`
+  animation-name: ${loopShadowAnimation};
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 `;
