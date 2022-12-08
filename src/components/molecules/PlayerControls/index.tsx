@@ -8,8 +8,8 @@ export const PlayerControls = ({
 }: PlayerControlsProps) => (
   <Container className={className}>
     <SkipForward
-      icon="skip-forward"
-      onClickControl={() => onClickControl(ControlType.SKIP_FORWARD)}
+      icon="skip-backward"
+      onClickControl={() => onClickControl(ControlType.SKIP_BACKWARD)}
     />
     {playing ? (
       <Pause
@@ -25,8 +25,8 @@ export const PlayerControls = ({
       />
     )}
     <SkipBackward
-      icon="skip-backward"
-      onClickControl={() => onClickControl(ControlType.SKIP_BACKWARD)}
+      icon="skip-forward"
+      onClickControl={() => onClickControl(ControlType.SKIP_FORWARD)}
     />
   </Container>
 );
