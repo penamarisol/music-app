@@ -28,6 +28,8 @@ const initialState = {
   setCurrentSongPlayer: () => {},
   playSong: () => {},
   pauseSong: () => {},
+  skipForward: () => {},
+  skipBackward: () => {},
 };
 
 export const PlayListContext = createContext<PlayListContextType>(initialState);
@@ -52,6 +54,10 @@ export function PlayListProvider({ children }: { children: ReactElement }) {
     dispatch({ type: ActionType.PlaySong, payload: undefined });
   const pauseSong = () =>
     dispatch({ type: ActionType.PauseSong, payload: undefined });
+  const skipForward = () =>
+    dispatch({ type: ActionType.SkipForward, payload: undefined });
+  const skipBackward = () =>
+    dispatch({ type: ActionType.SkipBackward, payload: undefined });
 
   useEffect(() => {
     setPlaylist(playList);
@@ -65,6 +71,8 @@ export function PlayListProvider({ children }: { children: ReactElement }) {
     setCurrentSongPlayer,
     playSong,
     pauseSong,
+    skipForward,
+    skipBackward,
     loading,
     playing: state.playing,
     playList: state.playList,

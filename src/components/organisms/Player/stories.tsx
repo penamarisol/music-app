@@ -6,14 +6,7 @@ import { PlayerProps } from './types';
 export default {
   component: Player,
   title: 'Organisms/Player',
-  args: {
-    url: 'https://via.placeholder.com/150',
-    alt: 'Placeholder',
-    title: 'Lemon Tree',
-    description: 'Post Malone',
-    progress: 138,
-    maxProgress: 186,
-  },
+  args: {},
 } as Meta;
 
 const Template: Story<PlayerProps> = (args) => <Player {...args} />;

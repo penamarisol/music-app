@@ -10,9 +10,10 @@ export const useLogic = () => {
   const {
     currentSongPlayer: songPlayer,
     playing,
-    setCurrentSongPlayer,
     playSong,
     pauseSong,
+    skipBackward,
+    skipForward,
   } = usePlayList();
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -33,6 +34,13 @@ export const useLogic = () => {
   }, [playing, audioRef]);
 
   useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.src = songPlayer?.audio.url as string;
+      void audioRef.current?.play();
+    }
+  }, [songPlayer?.audio.url]);
+
+  useEffect(() => {
     if (songPlayer) {
       getAudioDuration(songPlayer?.audio.url)
         .then((duration: number) => setSeconds(Math.round(duration)))
@@ -50,6 +58,8 @@ export const useLogic = () => {
     setCurrentProgress,
     play,
     pause,
+    skipBackward,
+    skipForward,
     playing,
   };
 };

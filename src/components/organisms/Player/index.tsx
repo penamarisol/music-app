@@ -6,6 +6,7 @@ import {
   PlayerControls,
   PlayerProgressBar,
   SongPlayerThumbnail,
+  SongPlayerThumbnailPlaceholder,
   Wrapper,
 } from './styles';
 import { PlayerProps } from './types';
@@ -19,6 +20,8 @@ export const Player = ({ className }: PlayerProps) => {
     playing,
     play,
     pause,
+    skipBackward,
+    skipForward,
     setCurrentProgress,
   } = useLogic();
 
@@ -30,22 +33,33 @@ export const Player = ({ className }: PlayerProps) => {
       case ControlType.PAUSE:
         pause();
         break;
+      case ControlType.SKIP_FORWARD:
+        skipForward();
+        break;
+      case ControlType.SKIP_BACKWARD:
+        skipBackward();
+        break;
     }
   };
 
-  return songPlayer ? (
+  return (
     <Container className={className}>
-      <SongPlayerThumbnail
-        url={songPlayer?.image.url}
-        alt={songPlayer?.image.alt}
-        title={songPlayer.title}
-        description={songPlayer.author}
-      />
+      {songPlayer ? (
+        <SongPlayerThumbnail
+          url={songPlayer?.image.url}
+          alt={songPlayer?.image.alt}
+          title={songPlayer.title}
+          description={songPlayer.author}
+        />
+      ) : (
+        <SongPlayerThumbnailPlaceholder />
+      )}
       <Wrapper>
         <audio
           ref={audioRef}
-          src={songPlayer.audio.url}
+          src={songPlayer?.audio.url}
           onTimeUpdate={setCurrentProgress}
+          onEnded={skipForward}
         />
         <PlayerControls
           onClickControl={switchPlayerActions}
@@ -54,7 +68,5 @@ export const Player = ({ className }: PlayerProps) => {
         <PlayerProgressBar progress={progress} maxProgress={maxProgress} />
       </Wrapper>
     </Container>
-  ) : (
-    <div>Hi, player</div>
   );
 };

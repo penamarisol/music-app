@@ -12,6 +12,8 @@ export type PlayListContextType = {
   setCurrentSongPlayer: (song: Song) => void;
   playSong: () => void;
   pauseSong: () => void;
+  skipForward: () => void;
+  skipBackward: () => void;
 };
 
 export enum ActionType {
@@ -21,6 +23,8 @@ export enum ActionType {
   SetCurrentSongPlayer = 'SET_CURRENT_SONG',
   PlaySong = 'PLAY_SONG',
   PauseSong = 'PAUSE_SONG',
+  SkipForward = 'SKIP_FORWARD',
+  SkipBackward = 'SKIP_BACKWARD',
 }
 
 type SongPayload = {
@@ -38,6 +42,8 @@ export type ActionsMap = {
   [ActionType.SetCurrentSongPlayer]: SongPayload;
   [ActionType.PlaySong]: undefined;
   [ActionType.PauseSong]: undefined;
+  [ActionType.SkipForward]: undefined;
+  [ActionType.SkipBackward]: undefined;
 };
 
 export type Action = {
