@@ -14,6 +14,7 @@ export const Favourite = React.forwardRef<HTMLButtonElement, FavouriteProps>(
         ref={ref}
         onClick={onClickFavourite}
         data-cy="favourite-song-button"
+        aria-label={`${icon} favourite button`}
       >
         <Icon data-cy={`icon-${icon}`} />
       </Container>

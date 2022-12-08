@@ -86,6 +86,7 @@ export default class AppDocument extends Document {
           type="font/ttf"
           crossOrigin="anonymous"
         />
+        <title>Z1 Music App 🥁</title>
       </Head>
       <body>
         <Main />
