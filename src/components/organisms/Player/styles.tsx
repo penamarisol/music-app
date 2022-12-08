@@ -1,6 +1,7 @@
 import { PlayerControls as DefaultPlayerControls } from '$/components/molecules/PlayerControls';
 import { PlayerProgressBar as DefaultPlayerProgressBar } from '$/components/molecules/PlayerProgressBar';
 import { SongPlayerThumbnail as DefaultSongPlayerThumbnail } from '$/components/molecules/SongPlayerThumbnail';
+import { SongPlayerThumbnailPlaceholder as DefaultSongPlayerThumbnailPlaceholder } from '$/components/molecules/SongPlayerThumbnailPlaceholder';
 import { from } from '$/styles/utils/responsive';
 import styled from 'styled-components';
 
@@ -9,7 +10,7 @@ export const Container = styled.div`
   height: auto;
   border: none;
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 1rem;
@@ -39,3 +40,7 @@ export const Wrapper = styled.div`
   align-items: center;
   gap: 1.5rem;
 `;
+
+export const SongPlayerThumbnailPlaceholder = styled(
+  DefaultSongPlayerThumbnailPlaceholder,
+)``;
