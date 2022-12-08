@@ -29,3 +29,15 @@ export const PlayListContainer = styled.div<{ $prettyScrollbar: boolean }>`
       $prettyScrollbar && prettyScrollbar({ vertical: false, size: '15rem' })}
   }
 `;
+
+export const PlayerContainer = styled.div`
+  position: fixed;
+  bottom: 0;
+  width: 90%;
+  left: 5%;
+
+  ${from['tabletLandscape']} {
+    width: 100%;
+    left: 0;
+  }
+`;

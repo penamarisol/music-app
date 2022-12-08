@@ -1,3 +1,5 @@
+import { ControlType } from '$/components/molecules/SongDescription/types';
+
 import { useLogic } from './logic';
 import {
   Container,
@@ -10,12 +12,27 @@ import {
 } from './styles';
 import { SongDetailProps } from './types';
 
-export const SongDetail = ({
-  className,
-  song,
-  playing = false,
-}: SongDetailProps) => {
-  const { seconds, loading, isFavourite, toggleFavourite } = useLogic(song);
+export const SongDetail = ({ className, song }: SongDetailProps) => {
+  const {
+    seconds,
+    loading,
+    isFavourite,
+    toggleFavourite,
+    isSongPlaying,
+    play,
+    pause,
+  } = useLogic(song);
+
+  const switchPlayerActions = (action: ControlType) => {
+    switch (action) {
+      case ControlType.PLAY:
+        play();
+        break;
+      case ControlType.PAUSE:
+        pause();
+        break;
+    }
+  };
 
   return (
     <Container className={className} data-cy="song-detail">
@@ -34,7 +51,8 @@ export const SongDetail = ({
           <SongDescription
             genre={song.genre}
             seconds={seconds}
-            playing={playing}
+            playing={isSongPlaying}
+            onClickControl={switchPlayerActions}
             loading={loading}
           />
         </DescriptionContainer>

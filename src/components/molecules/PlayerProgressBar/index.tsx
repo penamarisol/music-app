@@ -8,6 +8,7 @@ export const PlayerProgressBar = ({
   className,
   progress,
   maxProgress,
+  onChangeProgress,
 }: PlayerProgressBarProps) => {
   const { convertSecondsToMinutes } = useLogic();
   const [currentProgress, setCurrentProgress] = useState<number>(progress);
@@ -26,7 +27,10 @@ export const PlayerProgressBar = ({
       <ProgressBar
         progress={currentProgress}
         maxProgress={maxProgress}
-        onChange={(value) => setCurrentProgress(value)}
+        onChange={(value) => {
+          setCurrentProgress(value);
+          onChangeProgress?.(value);
+        }}
       />
       <Text tag="p" variant="caption">
         {maxProgressTrack}

@@ -1,6 +1,6 @@
 import { useLogic } from './logic';
 import { Container, GenreLabel, Pause, Play, Text } from './styles';
-import { SongDescriptionProps } from './types';
+import { ControlType, SongDescriptionProps } from './types';
 
 export const SongDescription = ({
   className,
@@ -8,6 +8,7 @@ export const SongDescription = ({
   seconds,
   playing = false,
   loading = false,
+  onClickControl,
 }: SongDescriptionProps) => {
   const { convertSecondsToMinutes } = useLogic();
   const songDurationInMinutes = convertSecondsToMinutes(seconds);
@@ -15,9 +16,17 @@ export const SongDescription = ({
   return (
     <Container className={className}>
       {playing ? (
-        <Pause icon="pause" size="small" />
+        <Pause
+          icon="pause"
+          size="small"
+          onClickControl={() => onClickControl(ControlType.PAUSE)}
+        />
       ) : (
-        <Play icon="play" size="small" />
+        <Play
+          icon="play"
+          size="small"
+          onClickControl={() => onClickControl(ControlType.PLAY)}
+        />
       )}
       {!loading && (
         <Text tag="p" variant="caption">

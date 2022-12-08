@@ -25,7 +25,7 @@ export const ProgressBar = React.forwardRef<HTMLInputElement, ProgressBarProps>(
         ref={ref}
         max={maxProgress}
         min={0}
-        step={1}
+        step={0.25}
         onChange={(ev) => onChange(parseInt(ev.target.value))}
       />
     );

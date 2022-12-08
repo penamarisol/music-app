@@ -1,9 +1,16 @@
 import { Text } from '$/components/atoms/Text';
+import { Player } from '$/components/organisms/Player';
 import { SongDetailPlaceholder } from '$/components/organisms/SongDetailPlaceholder';
 import { SongsList } from '$/components/organisms/SongList';
 import { usePlayList } from '$/context/PlayList';
 
-import { Container, PlayListContainer, SearchInput, Wrapper } from './styles';
+import {
+  Container,
+  PlayerContainer,
+  PlayListContainer,
+  SearchInput,
+  Wrapper,
+} from './styles';
 
 function HomeView(): JSX.Element {
   const { playList, loading } = usePlayList();
@@ -28,6 +35,9 @@ function HomeView(): JSX.Element {
           )}
         </PlayListContainer>
       </Wrapper>
+      <PlayerContainer>
+        <Player />
+      </PlayerContainer>
     </Container>
   );
 }

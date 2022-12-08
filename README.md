@@ -144,21 +144,26 @@ As we don't have any api method to save favourite songs, I have decided to save 
 
 <br>
 
+**Let's the music play! 🎷**
+
+The last feature! I have worked with audio elements from time to time, so I thought this task would be more dificult to finish. So, first I had to learn more about html5 audio element. Secondly, I have looked how to manage audio src once loaded in the html element. And, lastly, I have tried to  make sense Playlist context according to what is happening in the audio.
+
+<br>
 ## ▶️ Requisites
 
 - User should be able to:
   - see list of songs ✅
-  - listen to any song they choose
-  - play and pause song
-  - control track
+  - listen to any song they choose ✅
+  - play and pause song ✅
+  - control track ✅
   - mark a song as favorite ✅
 
 - User should be able to:
-  - move between songs with the prev/next buttons of the audio player
+  - move between songs with the prev/next buttons of the audio player ✅
 
 - App should look good in all window sizes ✅
 - Add unit or integration tests ✅
-- Add some micro interactions and animations
+- Add some micro interactions and animations 
 - Be careful about accessibility
 - Be careful about your markup semantics ✅
 

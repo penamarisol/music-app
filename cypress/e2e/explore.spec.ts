@@ -24,6 +24,7 @@ describe('Explore specs', () => {
     cy.wait('@playlistResponse');
     cy.get('[data-cy=song-detail]').as('songDetail');
     cy.get('[data-cy=favourite-song-button]').as('favouriteButton');
+    cy.get('[data-cy=play-button]').as('playButton');
   });
 
   it('visit the explore page', () => {
@@ -44,6 +45,33 @@ describe('Explore specs', () => {
 
     cy.get('@favouriteButton').first().click();
     cy.get('[data-cy=icon-heart-fill]').should('have.length', 0);
+  });
+  it('song should be played when play button clicked', () => {
+    const expectAudioUrl = 'https://d2s139ebbsksc4.cloudfront.net/Noel.mp3';
+    cy.wait(1000);
+    cy.get('@playButton').first().click();
+    cy.get('audio').should((els) => {
+      els.each((_, audio) => {
+        expect(audio.src).to.eq(expectAudioUrl);
+        expect(audio.paused).to.eq(false);
+      });
+    });
+  });
+
+  it('song should be paused when pause button clicked', () => {
+    const expectAudioUrl = 'https://d2s139ebbsksc4.cloudfront.net/Noel.mp3';
+    cy.wait(1000);
+    cy.get('@playButton').first().click();
+
+    cy.get('[data-cy=pause-button]').as('pauseButton');
+    cy.wait(1000);
+    cy.get('@pauseButton').first().click();
+    cy.get('audio').should((els) => {
+      els.each((_, audio) => {
+        expect(audio.src).to.eq(expectAudioUrl);
+        expect(audio.paused).to.eq(true);
+      });
+    });
   });
 });
 
